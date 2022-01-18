@@ -1,0 +1,12 @@
+.pe p{
+    width: 500px;
+    margin:0 auto;
+    margin-bottom: 20px;
+    color:#202E4F
+}
+
+@media only screen and (max-width: 688px) {
+    .pe p{
+        width:300px
+    }
+}
