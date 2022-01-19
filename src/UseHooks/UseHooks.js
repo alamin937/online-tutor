@@ -18,6 +18,7 @@ const UseHooks = () =>{
         .then(result =>{
             setUser(result.user)
             createUser(name)
+            
         }) 
         .catch(error =>{
             setError(error.message)
@@ -50,6 +51,7 @@ const UseHooks = () =>{
         signInWithEmailAndPassword(auth, email, password)
         .then(result =>{
             setUser(result.user)
+          
             const from = location.state?.from?.pathname || "/";
             navigate(from, { replace: true });
         })

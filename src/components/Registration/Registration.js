@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import UseAuth from '../../UseHooks/UseAuth';
 
 const Registration = () => {
-    const { register, user } = UseAuth()
+    const { register, user,error } = UseAuth()
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -32,6 +32,8 @@ const Registration = () => {
                         <Modal.Title>Registration Successfully</Modal.Title>
                     </Modal.Header>
                 </Modal.Dialog>}
+
+               <h3 style={{fontSize:'15px',color:'white'}}>{error}</h3>
             </div>
         </div>
     );

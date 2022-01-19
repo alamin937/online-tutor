@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import UseAuth from '../../UseHooks/UseAuth';
-import UseHooks from '../../UseHooks/UseHooks';
 
 const Login = () => {
-    const {login} = UseAuth()
+    const {login,error} = UseAuth()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     let navigate = useNavigate();
@@ -37,6 +36,7 @@ const Login = () => {
                     </Button>
                 </Form>
                 <p style={{ color: 'white', marginTop: '20px' }}>Not Register Please <Link style={{ color: 'white', fontWeight: '700' }} to='/registration'>Registration</Link></p>
+                <h3 style={{fontSize:'15px',color:'white'}}>{error}</h3>
             </div>
         </div>
     );
