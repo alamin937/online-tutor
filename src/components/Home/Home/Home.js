@@ -17,6 +17,7 @@ const Home = () => {
             <Instructor></Instructor>
             <Recent></Recent>
             <Footer></Footer>
+           
         </div>
     );
 };
