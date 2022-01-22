@@ -17,13 +17,22 @@ const NavArea = () => {
             <Nav className="nav">
               <NavLink to='/home'>Home</NavLink>
               <NavLink to='/about'>About</NavLink>
+              <NavLink to='/request'>Request For Tutor</NavLink>
+              <NavLink to='/student'>Student</NavLink>
+              <NavLink to='/jobs'>Tutor Jobs</NavLink>
 
               {
-                user?.email ? <Button style={{ marginLeft: '10px', fontWeight: '500' }} onClick={logOut}>Log Out</Button> :
+                user?.email ? <div>
+                  <NavLink to='/dashboard'>DashBoard</NavLink>
+                  <Button style={{ marginLeft: '10px', fontWeight: '500' }} onClick={logOut}>Log Out</Button> 
+                </div>:
 
-                  <NavLink to='/login'>Login</NavLink>
+                  <div>
+                    
+                    <NavLink to='/login'>Login</NavLink>
+                  </div>
               }
-              <span style={{ color: 'white', marginLeft: '15px', fontSize: '25px' }}>{user?.displayName}</span>
+              <span style={{ color: 'white', marginLeft: '15px', fontSize: '22px' }}>{user?.displayName}</span>
             </Nav>
          
         </Container>

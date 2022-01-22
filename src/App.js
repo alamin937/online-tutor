@@ -12,6 +12,10 @@ import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import AuthProvider from './AuthProvider/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Request from './AuthProvider/Tutor/Tutor/Request/Request';
+import Student from './AuthProvider/Tutor/Tutor/Student/Student';
+import Tuition from './AuthProvider/Tutor/Tutor/Tuition/Tuition';
+import DashBoard from './components/DashBoard/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -26,6 +30,14 @@ function App() {
           </PrivateRoute>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/registration' element={<Registration></Registration>}></Route>
+          <Route path='/request' element={<Request></Request>}></Route>
+          <Route path='/student' element={<PrivateRoute>
+            <Student></Student>
+          </PrivateRoute>}></Route>
+          <Route path='/jobs' element={<PrivateRoute>
+            <Tuition></Tuition>
+          </PrivateRoute>}></Route>
+          <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         </Routes>
        </BrowserRouter>
        </AuthProvider>
