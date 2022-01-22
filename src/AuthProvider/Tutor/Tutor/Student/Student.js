@@ -6,7 +6,7 @@ import NavArea from '../../../../components/Home/NavArea/NavArea';
 const Student = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/student',{
+        fetch('https://morning-citadel-15634.herokuapp.com/student',{
             method:'POST',
             headers:{
                 "content-type":"application/json"

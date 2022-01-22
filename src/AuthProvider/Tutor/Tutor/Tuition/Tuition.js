@@ -6,7 +6,7 @@ const Tuition = () => {
     const [tuitions, setTuitions] = useState([])
     
     useEffect(() =>{
-        fetch('http://localhost:5000/student')
+        fetch('https://morning-citadel-15634.herokuapp.com/student')
         .then(res => res.json())
         .then(data => setTuitions(data))
     },[])
