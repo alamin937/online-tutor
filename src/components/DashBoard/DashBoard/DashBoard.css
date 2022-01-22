@@ -1,0 +1,9 @@
+.dashboard a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 700;
+    background-color: #1E2C4E;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+}

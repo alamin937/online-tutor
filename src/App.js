@@ -16,6 +16,9 @@ import Request from './AuthProvider/Tutor/Tutor/Request/Request';
 import Student from './AuthProvider/Tutor/Tutor/Student/Student';
 import Tuition from './AuthProvider/Tutor/Tutor/Tuition/Tuition';
 import DashBoard from './components/DashBoard/DashBoard/DashBoard';
+import AddAdmin from './components/DashBoard/AddAdmin/AddAdmin';
+import AddTutor from './components/DashBoard/AddTutor/AddTutor';
+import Order from './components/DashBoard/Order/Order';
 
 function App() {
   return (
@@ -37,7 +40,11 @@ function App() {
           <Route path='/jobs' element={<PrivateRoute>
             <Tuition></Tuition>
           </PrivateRoute>}></Route>
-          <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
+          <Route path='/dashboard' element={<DashBoard></DashBoard>}>
+            <Route path='/dashboard/addadmin' element={<AddAdmin></AddAdmin>}></Route>
+            <Route path='/dashboard/addtutor' element={<AddTutor></AddTutor>}></Route>
+            <Route path='/dashboard/addorder' element={<Order></Order>}></Route>
+          </Route>
         </Routes>
        </BrowserRouter>
        </AuthProvider>
