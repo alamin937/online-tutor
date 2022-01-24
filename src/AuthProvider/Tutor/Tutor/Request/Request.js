@@ -28,7 +28,7 @@ const Request = () => {
         formData.append('number', number);
         formData.append('img', img);
 
-        fetch('http://localhost:5000/teacher', {
+        fetch('https://morning-citadel-15634.herokuapp.com/teacher', {
             method: 'POST',
             body: formData
         })
