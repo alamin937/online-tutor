@@ -20,6 +20,7 @@ import AddAdmin from './components/DashBoard/AddAdmin/AddAdmin';
 import AddTutor from './components/DashBoard/AddTutor/AddTutor';
 import Order from './components/DashBoard/Order/Order';
 import Book from './components/Book';
+import DeleteTeacher from './components/DashBoard/DeleteTeacher/DeleteTeacher';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Route path='/dashboard/addadmin' element={<AddAdmin></AddAdmin>}></Route>
             <Route path='/dashboard/addtutor' element={<AddTutor></AddTutor>}></Route>
             <Route path='/dashboard/addorder' element={<Order></Order>}></Route>
+            <Route path='/dashboard/deleteteacher' element={<DeleteTeacher></DeleteTeacher>}></Route>
           </Route>
           <Route path='/book/:bookId' element={<Book></Book>}></Route>
         </Routes>

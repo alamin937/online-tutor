@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width:90%;
+    margin: 0 auto;
+    margin-top: 40px;
+   
+}
+.teacher{
+    border: 1px solid grey;
+    margin-left: 10px;
+    border-radius: 30px;
+    padding:0 20px;
+}
+.teacher{
+    text-align: center;
+}
+.teacher img{
+    margin-top: 10px;
+    border-radius: 30px;
+
+}
+
+@media only screen and (max-width:688px) {
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

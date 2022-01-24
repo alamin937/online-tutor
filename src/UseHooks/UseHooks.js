@@ -11,9 +11,11 @@ const UseHooks = () =>{
     const [user, setUser] = useState()
     const [error, setError] = useState()
     const auth = getAuth();
+    const [loading, setLoading] = useState(true)
     
 
     const register = (email,password,name) =>{
+        
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
             setUser(result.user)
@@ -23,6 +25,7 @@ const UseHooks = () =>{
         .catch(error =>{
             setError(error.message)
         })
+        
     }
 
 
@@ -34,8 +37,8 @@ const UseHooks = () =>{
             else{
                 setUser({ })
             }
-        })
-       
+            setLoading(false)
+        }) 
     },[])
 
     const createUser = (name) =>{
@@ -48,6 +51,7 @@ const UseHooks = () =>{
     }
 
     const login = (email,password,navigate,location) =>{
+        setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
         .then(result =>{
             setUser(result.user)
@@ -58,15 +62,18 @@ const UseHooks = () =>{
         .catch(error =>{
             setError(error.message)
         })
+        .finally(() => setLoading(false))
     }
 
 
 
     const logOut = () =>{
+        setLoading(true)
         signOut(auth)
         .then(() =>{
             setUser({ })
         })
+        .finally(() => setLoading(false))
     }
 
 
@@ -75,7 +82,8 @@ const UseHooks = () =>{
         logOut,
         user,
         error,
-        login
+        login,
+        loading
     }
 
 
