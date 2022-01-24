@@ -33,7 +33,9 @@ function App() {
           </PrivateRoute>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/registration' element={<Registration></Registration>}></Route>
-          <Route path='/request' element={<Request></Request>}></Route>
+          <Route path='/request' element={<PrivateRoute>
+            <Request></Request>
+          </PrivateRoute>}></Route>
           <Route path='/student' element={<PrivateRoute>
             <Student></Student>
           </PrivateRoute>}></Route>

@@ -24,28 +24,28 @@ const Student = () => {
     return (
        <div>
            <NavArea></NavArea>
-            <div style={{ display: 'flex', alignItems:'center', justifyContent:'center', marginTop:'10px' }}>
+            <div style={{display: 'flex', alignItems:'center', justifyContent:'center',  marginTop:'10px', marginLeft:'40px' }}>
            
            <div>
                <h1>Student Area Post a Tuition Jobs</h1>
                <div>
                    <form onSubmit={handleSubmit(onSubmit)}>
                        <label style={{fontWeight:'700', marginBottom:'5px'}}>Add Description</label> <br />
-                       <textarea style={{width:'400px'}} {...register("description")} /> <br />
+                       <textarea style={{width:'300px'}} {...register("description")} /> <br />
                        <label style={{fontWeight:'700'}}>Add Subjects</label> <br />
-                       <input style={{width:'400px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("subjects")} /> <br />
+                       <input style={{width:'300px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("subjects")} /> <br />
                        <label style={{fontWeight:'700'}}>Add Class</label> <br />
-                       <input style={{width:'400px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("class")} /> <br />
+                       <input style={{width:'300px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("class")} /> <br />
                        <label style={{fontWeight:'700'}}>Add Salary</label> <br />
-                       <input style={{width:'400px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("salay")} /> <br />
+                       <input style={{width:'300px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("salay")} /> <br />
                        <label style={{fontWeight:'700'}}>Add Time</label> <br />
-                       <input style={{width:'400px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("time")} /> <br />
+                       <input style={{width:'300px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("time")} /> <br />
                        <label style={{fontWeight:'700'}}>Add Address</label> <br />
-                       <input style={{width:'400px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("address")} /> <br />
+                       <input style={{width:'300px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("address")} /> <br />
                        <label style={{fontWeight:'700'}}>Add Phone Number</label> <br />
-                       <input style={{width:'400px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("phone")} /> <br />
+                       <input style={{width:'300px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'5px'}} {...register("phone")} /> <br />
                        
-                       <input style={{width:'400px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'10px'}} type="submit" />
+                       <input style={{width:'300px',padding:'5px', borderRadius:'5px', border:'1px solid gray', marginTop:'10px'}} type="submit" />
                    </form>
                </div>
            </div>

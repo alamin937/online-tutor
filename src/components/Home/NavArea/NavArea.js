@@ -17,7 +17,7 @@ const NavArea = () => {
             <Nav className="nav">
               <NavLink to='/home'>Home</NavLink>
               <NavLink to='/about'>About</NavLink>
-              <NavLink to='/request'>Request For Tutor</NavLink>
+              <NavLink to='/request'>Teacher</NavLink>
               <NavLink to='/student'>Student</NavLink>
               <NavLink to='/jobs'>Tutor Jobs</NavLink>
 
