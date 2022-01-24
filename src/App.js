@@ -19,6 +19,7 @@ import DashBoard from './components/DashBoard/DashBoard/DashBoard';
 import AddAdmin from './components/DashBoard/AddAdmin/AddAdmin';
 import AddTutor from './components/DashBoard/AddTutor/AddTutor';
 import Order from './components/DashBoard/Order/Order';
+import Book from './components/Book';
 
 function App() {
   return (
@@ -42,11 +43,12 @@ function App() {
           <Route path='/jobs' element={<PrivateRoute>
             <Tuition></Tuition>
           </PrivateRoute>}></Route>
-          <Route path='/dashboard' element={<DashBoard></DashBoard>}>
+          <Route path='/dashboard' element={<PrivateRoute><DashBoard></DashBoard></PrivateRoute>}>
             <Route path='/dashboard/addadmin' element={<AddAdmin></AddAdmin>}></Route>
             <Route path='/dashboard/addtutor' element={<AddTutor></AddTutor>}></Route>
             <Route path='/dashboard/addorder' element={<Order></Order>}></Route>
           </Route>
+          <Route path='/book/:bookId' element={<Book></Book>}></Route>
         </Routes>
        </BrowserRouter>
        </AuthProvider>

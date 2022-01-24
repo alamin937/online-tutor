@@ -10,9 +10,9 @@ const DashBoard = () => {
             <div style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop:'40px'}}>
            <div>
            <div className='dashboard'>
-             <Link to="/dashboard/addtutor">Add Tutor</Link>
+             <Link to="/dashboard/addtutor">My Booked Information</Link>
              <Link to="/dashboard/addadmin">Add Admin</Link>
-             <Link to="/dashboard/addorder">orders</Link>
+             <Link to="/dashboard/addorder">All Book Information</Link>
             </div>
             <div style={{textAlign:'center', marginTop:'50px'}}>
             <Outlet />

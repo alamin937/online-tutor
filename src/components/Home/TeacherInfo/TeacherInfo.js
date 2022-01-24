@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './TeacherInfo.css'
 
 const TeacherInfo = () => {
@@ -23,11 +25,10 @@ const TeacherInfo = () => {
                     <div style={{textAlign:'left', marginTop:'10px'}}>
                         <h5>Name: {teacher.name}</h5>
                         <h5>Qualification: {teacher.qualification}</h5>
-                        <h5>Teaching: {teacher.teaching}</h5>
-                        <h5>Location: {teacher.location}</h5>
-                        <h5>Salary: {teacher.salary}</h5>
-                        <h5>Number: {teacher.number}</h5>
+                       
+                        <Link to={`/book/${teacher._id}`}><Button style={{width:'100%', marginBottom:'10px', borderRadius:'30px'}}>View Details</Button> </Link>
                     </div>
+                    
                 </div>)
             }
         </div>
