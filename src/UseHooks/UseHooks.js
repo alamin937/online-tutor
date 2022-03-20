@@ -10,6 +10,7 @@ firebaseAuthentication()
 const UseHooks = () =>{
     const [user, setUser] = useState()
     const [error, setError] = useState()
+    const [admin, setAdmin] = useState(false)
     const auth = getAuth();
     const [loading, setLoading] = useState(true)
     
@@ -20,6 +21,8 @@ const UseHooks = () =>{
         .then(result =>{
             setUser(result.user)
             createUser(name)
+            setError(" ")
+            saveUser(email, name)
             
         }) 
         .catch(error =>{
@@ -55,7 +58,7 @@ const UseHooks = () =>{
         signInWithEmailAndPassword(auth, email, password)
         .then(result =>{
             setUser(result.user)
-          
+            setError(" ")
             const from = location.state?.from?.pathname || "/";
             navigate(from, { replace: true });
         })
@@ -64,6 +67,12 @@ const UseHooks = () =>{
         })
         .finally(() => setLoading(false))
     }
+
+    useEffect(() =>{
+        fetch(`https://morning-citadel-15634.herokuapp.com/users/${user?.email}`)
+        .then(res => res.json())
+        .then(data => setAdmin(data.admin))
+    },[user?.email])
 
 
 
@@ -77,7 +86,28 @@ const UseHooks = () =>{
     }
 
 
+
+    const saveUser = (email, displayName) =>{
+
+        const user = {email: email, displayName:displayName}
+
+
+        fetch('http://https://morning-citadel-15634.herokuapp.com/users', {
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then()
+    }
+
+
+
+
+
     return{
+        admin,
         register,
         logOut,
         user,
