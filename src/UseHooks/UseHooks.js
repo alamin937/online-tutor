@@ -92,7 +92,7 @@ const UseHooks = () =>{
         const user = {email: email, displayName:displayName}
 
 
-        fetch('http://https://morning-citadel-15634.herokuapp.com/users', {
+        fetch('https://morning-citadel-15634.herokuapp.com/users', {
             method:'POST',
             headers:{
                 'content-type':'application/json'
